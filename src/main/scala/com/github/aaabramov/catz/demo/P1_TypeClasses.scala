@@ -15,7 +15,7 @@ object P1_TypeClasses extends App {
     println(TS.render(e))
 
   implicit object MyImpl extends ToString[Person]{
-    override def render(a: Person): String = ???
+    override def render(p: Person): String = s"The person name ${p.name} is ${p.age} year(s) old"
   } // "same as" `val myImpl: ToString[Person] = ???`
 
   // Simple to string implementation

@@ -1,5 +1,20 @@
 # Scala cats demo project
 
+## Running examples:
+
+```shell
+$ sbt
+sbt:cats-demo> runMain com.github.aaabramov.catz.demo.P1_TypeClasses
+The person name Alexander is 20 year(s) old
+Person(A********,20)
+
+sbt:cats-demo> runMain com.github.aaabramov.catz.demo.P8_Functor
+Some(JOE)
+None
+List(JOE, SAM, CHLOE)
+List()
+``` 
+
 ## Useful links:
 
 - cats book:
