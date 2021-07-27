@@ -34,6 +34,4 @@ object P7_HigherKindedTypes extends App {
   println(Sum[Int, Seq].sum(seq))
   println(Sum[Int, Set].sum(set))
 
-  // TODO: app ops?
-
 }
