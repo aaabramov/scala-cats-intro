@@ -1,7 +1,9 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
 
 import cats.kernel.Monoid
-import cats.syntax.monoid._
+import cats.syntax.semigroup._
+import com.github.aaabramov.catz.demo.Price
+
 
 object P6_Monoid extends App {
 
@@ -27,6 +29,13 @@ object P6_Monoid extends App {
   // 0 => [0, 1] => 1
   // 1 => [1, 2] => 1
 
+  val ints: Seq[Int] = Seq(
+    10,
+    20,
+    50,
+    300
+  )
+
   val prices: Seq[Price] = Seq(
     Price(10),
     Price(20),
@@ -34,6 +43,7 @@ object P6_Monoid extends App {
     Price(300)
   )
 
+  println(sum(ints))
   println(sum(prices))
 
 }

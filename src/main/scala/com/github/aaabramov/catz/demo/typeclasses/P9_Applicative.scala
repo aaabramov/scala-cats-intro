@@ -1,8 +1,9 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
 
 import cats.Applicative
 
 import scala.concurrent.{ExecutionContext, Future}
+
 
 object P9_Applicative extends App {
 

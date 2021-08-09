@@ -1,7 +1,9 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
 
+import com.github.aaabramov.catz.demo.Person
 import io.circe.Codec
 import io.circe.generic.extras.semiauto.deriveConfiguredCodec
+
 
 object P2_KnownTypeClasses extends App {
 
@@ -27,6 +29,7 @@ object P2_KnownTypeClasses extends App {
 
   trait JsonFormat[T] {
     def toJson(e: T): Json
+
     def fromJson(json: Json): T
   }
 

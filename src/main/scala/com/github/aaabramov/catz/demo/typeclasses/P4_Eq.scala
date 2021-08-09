@@ -1,6 +1,7 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
 
-import cats.{Eq, Show}
+import com.github.aaabramov.catz.demo.Person
+
 
 //noinspection ComparingUnrelatedTypes
 object P4_Eq extends App {
@@ -19,10 +20,10 @@ object P4_Eq extends App {
 
   // Introducing cats.Eq
 
-//  implicit val personEq: Eq[Person] = new Eq[Person] {
-//    override def eqv(x: Person, y: Person): Boolean =
-//      x == y
-//  }
+  //  implicit val personEq: Eq[Person] = new Eq[Person] {
+  //    override def eqv(x: Person, y: Person): Boolean =
+  //      x == y
+  //  }
 
   implicit val personEq: Eq[Person] = Eq.fromUniversalEquals
 
@@ -34,8 +35,8 @@ object P4_Eq extends App {
   println("alex === joe: " + (alex === joe))
   println("alex === joe: " + (alex.eqv(joe)))
   println("alex === joe: " + (alex.neqv(joe)))
-//  println("alex === 2: " + (alex === 2)) // Compilation error
+  //  println("alex === 2: " + (alex === 2)) // Compilation error
   println("alex =!= joe: " + (alex =!= joe))
-//  println("alex =!= 2: " + (alex =!= 2)) // Compilation error
+  //  println("alex =!= 2: " + (alex =!= 2)) // Compilation error
 
 }

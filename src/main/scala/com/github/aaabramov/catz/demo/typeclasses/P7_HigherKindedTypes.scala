@@ -1,6 +1,7 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
 
 import cats.kernel.Monoid
+
 
 object P7_HigherKindedTypes extends App {
 

@@ -1,6 +1,7 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
 
 import cats.Show
+import com.github.aaabramov.catz.demo.Person
 
 object P3_Show extends App {
 

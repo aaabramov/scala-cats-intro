@@ -1,10 +1,9 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
 
 import cats.Functor
-import cats.kernel.Monoid
-import cats.syntax.monoid._
 
 import scala.concurrent.{ExecutionContext, Future}
+
 
 object P8_Functor extends App {
 
