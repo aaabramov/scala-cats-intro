@@ -8,7 +8,7 @@ import scala.concurrent.{ExecutionContext, Future}
 //@formatter:off
 object P10_Monad extends App {
 
-  // Applicative
+  // Monad
   // - def flatMap[A, B](fa: F[A])(f: A => F[B]): F[B]
 
   implicit val optApplicative: Monad[Option] =

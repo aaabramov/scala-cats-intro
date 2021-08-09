@@ -29,7 +29,7 @@ object P11_OptionT extends App {
   /** Solution */
 
   // Welcome OptionT!
-  // case class OptionT[F[_], A](value: F[Option[A]])
+  // case class OptionT[F[_], A](value: F[Option[A]]) // Future[Option[Int]] or IO[Option[String]]
 
   def fetchPerson(id: Long): OptionT[Future, Person] =
     if (id % 2 == 0) {
@@ -37,7 +37,7 @@ object P11_OptionT extends App {
     } else if (id < 0) {
       OptionT.liftF(Future.failed(new RuntimeException("ID < 0")))
     } else {
-      OptionT.none[Future, Person]
+      OptionT.none[Future, Person] // Future[Option[Person]] = Future(None)
       // OptionT.none -- scala is powerful enough
     }
 
@@ -79,7 +79,7 @@ object P11_OptionT extends App {
   OptionT.apply[Future, Int](Future(Some(10))): OptionT[Future, Int]
 
   // if (cond) OptionT.some(A) else OptionT.none[A]
-  OptionT.when[Future, String](1 % 2 == 0)("Joe")
+  OptionT.when[Future, String](1 % 2 == 0)("Joe") // => OptionT.none[A]
 
   // if (cond) OptionT.lift(F[A]) else OptionT.none[F, A]
   OptionT.whenF(1 % 2 == 0)(Future("Joe"))

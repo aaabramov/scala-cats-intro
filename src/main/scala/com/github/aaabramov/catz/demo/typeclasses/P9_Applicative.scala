@@ -7,7 +7,7 @@ import scala.concurrent.{ExecutionContext, Future}
 
 object P9_Applicative extends App {
 
-  // Applicative
+  // Applicative extends Functor
   // - def pure[A](a: A): F[A]
   // - def map[A, B](fa: F[A])(f: A => B): F[B] // (from Functor)
 
