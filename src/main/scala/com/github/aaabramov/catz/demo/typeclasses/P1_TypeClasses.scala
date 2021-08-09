@@ -1,4 +1,7 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
+
+import com.github.aaabramov.catz.demo.Person
+
 
 object P1_TypeClasses extends App {
 
@@ -14,7 +17,7 @@ object P1_TypeClasses extends App {
   def show[T](e: T)(implicit TS: ToString[T]): Unit =
     println(TS.render(e))
 
-  implicit object MyImpl extends ToString[Person]{
+  implicit object MyImpl extends ToString[Person] {
     override def render(p: Person): String = s"The person name ${p.name} is ${p.age} year(s) old"
   } // "same as" `val myImpl: ToString[Person] = ???`
 

@@ -1,6 +1,8 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
 
 import cats.Semigroup
+import com.github.aaabramov.catz.demo.Price
+
 
 object P5_Semigroup extends App {
 
@@ -15,6 +17,7 @@ object P5_Semigroup extends App {
   implicit val priceSemigroup: Semigroup[Price] = (x, y) => Price(x.amount + y.amount)
 
   import cats.syntax.semigroup._
+
   println(
     Price(100) |+| Price(200)
   )

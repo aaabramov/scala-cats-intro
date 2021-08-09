@@ -1,17 +1,18 @@
-package com.github.aaabramov.catz.demo
+package com.github.aaabramov.catz.demo.typeclasses
 
 import cats.Monad
 
 import scala.concurrent.{ExecutionContext, Future}
 
+
 //@formatter:off
 object P10_Monad extends App {
 
-  // Applicative
-  // - def pure[A](a: A): F[A]
-  // - def map[A, B](fa: F[A])(f: A => B): F[B] // (from Functor)
+  // Monad
+  // - def flatMap[A, B](fa: F[A])(f: A => F[B]): F[B]
 
-  implicit val optApplicative: Monad[Option] = new Monad[Option] {
+  implicit val optApplicative: Monad[Option] =
+    new Monad[Option] {
 
     override def flatMap[A, B](fa: Option[A])(f: A => Option[B]): Option[B] =
       fa.flatMap(f)
@@ -27,7 +28,8 @@ object P10_Monad extends App {
     override def tailRecM[A, B](a: A)(f: A => Option[Either[A, B]]): Option[B] = ???
   }
 
-  implicit val listApplicative: Monad[List] = new Monad[List] {
+  implicit val listApplicative: Monad[List] =
+    new Monad[List] {
     override def flatMap[A, B](fa: List[A])(f: A => List[B]): List[B] =
       fa.flatMap(f)
 
