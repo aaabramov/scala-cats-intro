@@ -27,7 +27,7 @@ List()
 - Awesome scala lessons [on YouTube](https://www.youtube.com/rockthejvm)
 - [cats 101 on YouTube](https://www.youtube.com/results?search_query=Rock+the+JVM+cats)
 - To become a PRO: [herding cats](https://eed3si9n.com/herding-cats/index.html)
-- [Library](https://github.com/typelevel/simulacrum) to generate type call boilerplate (ops, syntax, implicits, etc.)
+- [Library](https://github.com/typelevel/simulacrum) to generate type class boilerplate (ops, syntax, implicits, etc.)
 
 ## cats typeclasses hierarchy
 ![Cats typeclasses hierarchy](cats_typeclasses.svg)
